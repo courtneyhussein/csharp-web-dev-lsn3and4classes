@@ -7,9 +7,29 @@ namespace SchoolPractice
 {
     public class Student
     {
-        private string Name;
-        private int StudentId;
-        private int NumberOfCredits;
-        private double Gpa;
+        //Auto-implemented properties.
+        public string Name { get; set; }
+        public int StudentId { get; set; }
+        public int NumberOfCredits { get; set; }
+        public double Gpa { get; set; }
+
+        //Constructor
+        public Student (string _Name, int _StudentId)
+        {
+            Name = _Name;
+            StudentId = _StudentId;
+            NumberOfCredits = 0;
+            Gpa = 0.0;
+        }
+
+        //Method
+        public void PrintInfo()
+        {
+            Console.WriteLine($"{Name} has student ID {StudentId}, {NumberOfCredits} credits, and a GPA of {Gpa}. ");
+        }
+
+
+
+
     }
 }
